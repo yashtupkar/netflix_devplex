@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --netflix-red: #e50914;
+  --netflix-dark: #000000;
+  --netflix-light: #ffffff;
+  --netflix-gray: #757575;
+}
+
+body {
+  margin: 0;
+  font-family: 'Netflix Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--netflix-dark);
+  color: var(--netflix-light);
+}
+
+@layer components {
+  .netflix-button {
+    @apply bg-[#e50914] text-white font-medium py-3 px-6 rounded flex items-center justify-center cursor-pointer hover:bg-[#f40612] transition-colors duration-200;
+  }
+  
+  .netflix-input {
+    @apply bg-[rgba(22,22,22,0.7)] border border-[rgba(128,128,128,0.7)] text-white py-4 px-4 rounded-sm focus:outline-none focus:border-white w-full;
+  }
+  
+  .netflix-card {
+    @apply bg-black bg-opacity-80 p-6 md:p-12 rounded;
+  }
+}
